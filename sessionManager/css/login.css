@@ -1,0 +1,113 @@
+:root {
+  --body--bgcolorS: #ffffff;
+  --body--bgcolorL: #f0f0f0;
+  --header--bgcolorS: #ffffff;
+  --header--bgcolorL: #f0f0f0;
+  --footer--bgcolor: #f0f0f0;
+  --border--color: #808080;
+  --session__container--bgcolor: #ffffff;
+  --session__input--bgcolor: #cccccc;
+  --session__button--color: #4d4d4d;
+  --session__buton--fontColor: #ffffff;
+  --session__options--linkColor: #162CF5;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--body--bgcolorS);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}
+header {
+  height: 7.5rem;
+  background-color: var(--header--bgcolorS);
+  border-bottom: 0.1rem var(--border--color) solid;
+}
+header img {
+  width: 15rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.login__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: var(--session__container--bgcolor);
+  border: none;
+}
+.mainHeading {
+  margin-bottom: 3rem;
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.login__form form {
+  display: flex;
+  flex-direction: column;
+}
+.login__options {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-top: 0.1rem var(--border--color) solid;
+  padding-top: 3rem;
+}
+input {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--session__input--bgcolor);
+}
+button[type=submit] {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--session__button--color);
+  cursor: pointer;
+  color: var(--session__buton--fontColor);
+}
+a {
+  text-decoration: none;
+  color: var(--session__options--linkColor);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+a:last-of-type {
+  margin-bottom: 0;
+}
+@media (min-width: 600px) {
+  body {
+    background-color: var(--body--bgcolorL);
+  }
+  header {
+    height: 10rem;
+    background-color: var(--header--bgcolorL);
+  }
+  header img {
+    width: 20rem;
+  }
+  .login__container {
+    border: 0.1rem var(--border--color) solid;
+    box-shadow: 1px 1px var(--border--color);
+    width: 35rem;
+    margin: 3rem;
+    padding: 3rem 4.9rem;
+  }
+  input, button {
+    width: 25rem;
+  }
+}

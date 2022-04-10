@@ -1,0 +1,84 @@
+:root {
+  --body--bgcolorS: #ffffff;
+  --body--bgcolorL: #f0f0f0;
+  --header--bgcolorS: #ffffff;
+  --header--bgcolorL: #f0f0f0;
+  --footer--bgcolor: #f0f0f0;
+  --border--color: #808080;
+  --session__container--bgcolor: #ffffff;
+  --session__input--bgcolor: #cccccc;
+  --session__button--color: #4d4d4d;
+  --session__buton--fontColor: #ffffff;
+  --session__options--linkColor: #162CF5;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--body--bgcolorS);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}
+header {
+  height: 7.5rem;
+  background-color: var(--header--bgcolorS);
+  border-bottom: 0.1rem var(--border--color) solid;
+}
+header img {
+  width: 15rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.notifications__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: var(--session__container--bgcolor);
+  border: none;
+}
+.mainHeading {
+  margin-bottom: 3rem;
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+.notifications {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 3rem;
+}
+a {
+  text-decoration: none;
+  color: var(--session__options--linkColor);
+  font-size: 1.6rem;
+  margin-bottom: 0rem;
+}
+@media (min-width: 600px) {
+  body {
+    background-color: var(--body--bgcolorL);
+  }
+  header {
+    height: 10rem;
+    background-color: var(--header--bgcolorL);
+  }
+  header img {
+    width: 20rem;
+  }
+  .notifications__container {
+    border: 0.1rem var(--border--color) solid;
+    box-shadow: 1px 1px var(--border--color);
+    width: 65rem;
+    margin: 3rem;
+    padding: 3rem;
+  }
+}

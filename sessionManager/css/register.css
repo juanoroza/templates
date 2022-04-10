@@ -1,0 +1,166 @@
+:root {
+  --header--bgcolor: white;
+  --body--bgcolor: white;
+  --body--bgcolorS: #ffffff;
+  --body--bgcolorL: #f0f0f0;
+  --header--bgcolorS: #ffffff;
+  --header--bgcolorL: #f0f0f0;
+  --footer--bgcolor: #f0f0f0;
+  --border--color: #808080;
+  --session__container--bgcolor: #ffffff;
+  --session__input--bgcolor: #cccccc;
+  --session__button--color: #808080;
+  --session__buton--fontColor: #000000;
+  --session__inputButton--color: #4d4d4d;
+  --session__inputButon--fontColor: #ffffff;
+  --session__options--linkColor: #162CF5;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: var(--body--bgcolor);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}
+header {
+  height: 7.5rem;
+  background-color: var(--header--bgcolor);
+  border-bottom: 0.1rem var(--border--color) solid;
+}
+header img {
+  width: 15rem;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.registerForm__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 3rem 1rem;
+  background-color: var(--session__container--bgcolor);
+  border: none;
+}
+.mainHeading {
+  margin-bottom: 3rem;
+}
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+input {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--session__input--bgcolor);
+}
+input[type=radio] {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 2rem 0 0;
+  padding: 0;
+}
+.registerType {
+  display: flex;
+  background-color: var(--session__input--bgcolor);
+  text-align: left;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+}
+button {
+  width: 100%;
+  height: 4rem;
+  margin-bottom: 2rem;
+  padding: 0.5rem;
+  border: none;
+  background-color: var(--session__button--color);
+  cursor: pointer;
+  color: var(--session__buton--fontColor);
+}
+button:last-of-type {
+  margin-bottom: 0;
+}
+button[type=submit] {
+  background-color: var(--session__inputButton--color);
+  color: var(--session__inputButon--fontColor);
+}
+#agencyName, #officeName {
+  display: none;
+}
+@media (min-width: 600px) {
+  header {
+    height: 10rem;
+  }
+  header img {
+    width: 20rem;
+  }
+  .registerForm__container {
+    border: 0.1rem var(--border--color) solid;
+    box-shadow: 1px 1px var(--border--color);
+    width: 65rem;
+    margin: 3rem;
+    padding: 3rem 4.9rem;
+  }
+  .userData {
+    width: 25rem;
+    margin-right: 2.5rem;
+  }
+  .userTypeData {
+    width: 25rem;
+    margin-left: 2.5rem;
+  }
+  .userTypeData p {
+    display: inline;
+  }
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .userData input {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .registerType {
+    width: 100%;
+    margin-bottom: 2.9rem;
+  }
+  .agencyInfo input {
+    width: 100%;
+    margin-bottom: 2.9rem;
+  }
+  .agencyInfo:last-of-type input {
+    margin-bottom: 1rem;
+  }
+  .formButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #input, #clean, #cancel {
+    width: 15rem;
+    margin: 1rem;
+  }
+  .formButtons #input {
+    order: 3;
+  }
+  .formButtons #clean {
+    order: 1;
+  }
+  .formButtons #cancel {
+    order: 2;
+  }
+}
